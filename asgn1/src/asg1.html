@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+    <button type="button" id="clearButton">Clear</button>
+    <button id="undoButton">Undo</button>
+    </p>
+    <p>
+      <button type="button" id="daynightButton">Day/Night Cycle</button>
+    </p>
+    <p>
+    <button type="button" id="pointButton">Point</button>
+    <button type="button" id="triangleButton">Triangle</button>
+    <button type="button" id="circleButton">Circle</button>
+    </p>
+
+    <p>
+      Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlider">
+      Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlider">
+      Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlider">
+      <div>
+        <label>Color Preview:</label>
+        <div id="colorPreview" style="display: inline-block; width: 50px; height: 20px; border: 1px solid #000;"></div>
+      </div>
+    </p>
+
+    <p>
+      Size <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+      Segments (Circle only) <input type="range" min="3" max="100" value="10" class="slider" id="segmentSlider">
+    </p>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="asg1.js"></script>
+  </body>
+</html>
