@@ -1,3 +1,9 @@
+//Pranav Mayilraj
+//pmayilra@ucsc.edu
+
+//Notes to Grader:
+//Read README
+
 const POINT = 0;
 const TRIANGLE = 1;
 const CIRCLE = 2;
