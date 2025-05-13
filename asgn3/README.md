@@ -12,7 +12,7 @@ World is implemented. There is some interesting world to walk around. - check (a
 Multiple textures - check (grass, stone, gold)
 Add/delete blocks - check
 Add simple story or game to world - my game is that there are 3 randomly generated gold treasure blocks and the objective is to find all of them. once you walk towards one it is collected. you win by collecting all of them and the console gives you a fun message
-Performance - tried my best to follow the steps on this but I just couldn't get my 32x32 map to be any good. I feel as though my code functionality is right for performance so it might just be my laptop that is really slow.
+Performance - tried my best to follow the steps on this and my 32x32 map seems to run at a decent rate. I think my computer is definitely slow though. (check?)
 Wow - Okay so I couldn't think of anything majestic to add so I just enhanced functionality a lot. here are some things that I did
     - Adding and deleting blocks will have a white texture over the block that was just added (to indicate that it was added) and any added block you look at will have a red highlight that indicates you can press G to delete it
     - Once adding blocks, you can save the world "l" and load a saved world "k". I've made some really cool things using this and it was sort of difficult to implement
