@@ -344,21 +344,16 @@ function updateSelectedColor() {
 }
 
 function initTextures() {
-  var stoneTexture = gl.createTexture();
-  if (!stoneTexture) {
-    console.log('Failed to create texture object');
-    return false;
-  }
-
-  var stoneImage = new Image();
-  stoneImage.onload = function() {
-    loadTexture(stoneImage, stoneTexture);
+  var rockTexture = gl.createTexture();
+  var rockImage = new Image();
+  rockImage.onload = function() {
+    loadTexture(rockImage, rockTexture);
     renderAllShapes();
   };
-  stoneImage.onerror = function() {
-    console.log('Failed to load stone texture');
+  rockImage.onerror = function() {
+    console.log('Failed to load rock texture');
   };
-  stoneImage.src = 'stone.jpg';
+  rockImage.src = 'rock.jpg';
 
   var treasureTexture = gl.createTexture();
   var treasureImage = new Image();
@@ -387,7 +382,7 @@ function initTextures() {
   grassImage.src = 'grass.jpg';
 
   window.textures = {
-    stone: stoneTexture,
+    rock: rockTexture,
     grass: grassTexture
   };
 
@@ -550,7 +545,7 @@ function drawGround() {
 }
 
 function drawWalls() {
-  if (!window.textures || !window.textures.stone) {
+  if (!window.textures || !window.textures.rock) {
     console.log("Texture not loaded yet");
     return;
   }
@@ -597,7 +592,7 @@ function drawWalls() {
   gl.uniform1f(u_TexColorWeight, 1.0);
 
   const wallCube = new Cube();
-  wallCube.texture = window.textures.stone;
+  wallCube.texture = window.textures.rock;
 
   for (let x = 0; x < 8; x++) {
     for (let z = 0; z < 8; z++) {
