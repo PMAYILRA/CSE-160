@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <p>
+      Left Arm Joint Angle
+      <input
+        type="range"
+        min="-310"
+        max="-160"
+        value="-235"
+        id="leftArmJointSlide"
+      />
+      Right Arm Joint Angle
+      <input
+        type="range"
+        min="-270"
+        max="0"
+        value="235"
+        id="rightArmJointSlide"
+      />
+    </p>
+
+    <p>
+      Left Arm Rotation
+      <input type="range" min="-90" max="90" value="55" id="leftArmSlide" />
+      Right Arm Rotation
+      <input type="range" min="-90" max="90" value="-55" id="rightArmSlide" />
+    </p>
+
+    <p>
+      <button id="leftArmAnimateButton">Left Arm Animation On/Off</button>
+    </p>
+
+    <p>
+      <button id="legAnimateButton">Leg Animation On/Off</button>
+    </p>
+
+    <p>
+      <button id="normalVisButton">Toggle Normal Visualization</button>
+    </p>
+
+    <div>
+      <h3>Light Controls</h3>
+      <button id="lightToggleButton">Toggle Light</button>
+      <div>X: <input type="range" id="lightXSlider" min="-5" max="5" step="0.1" value="2"></div>
+      <div>Y: <input type="range" id="lightYSlider" min="-5" max="5" step="0.1" value="3"></div>
+      <div>Z: <input type="range" id="lightZSlider" min="-5" max="5" step="0.1" value="4"></div>
+    </div>
+
+    <div
+      id="fpsDisplay"
+      style="position: absolute; top: 10px; left: 10px; color: white; z-index: 10;"
+    ></div>
+
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../lib/webgl-utils.js"></script>
+
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Cone.js"></script>
+    <script src="Camera.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="asg4.js"></script>
+  </body>
+</html>
