@@ -186,7 +186,7 @@ var g_spotlightOuterCutoff = 25;
 var g_spotlightDirection = [0, -1, 0];
 
 var g_lightingControls = {
-  ambient: 0.2,
+  ambient: 0.7,
   diffuse: 0.8,
   specular: 0.5,
   shininess: 32
